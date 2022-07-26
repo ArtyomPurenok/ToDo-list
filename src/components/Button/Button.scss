@@ -1,0 +1,19 @@
+.button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border-color: transparent;
+
+    &_active {
+        border-color: red;
+
+        & svg {
+            width: 100%;
+            height: 100%;
+
+             & path {
+                fill: green
+             }
+        }
+    }
+}

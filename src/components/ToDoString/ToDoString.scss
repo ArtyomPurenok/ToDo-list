@@ -1,0 +1,9 @@
+.todo-string {
+    display: flex;
+    align-items: center;
+
+    &_active {
+        text-decoration: line-through;
+        color: silver;
+    }
+}
