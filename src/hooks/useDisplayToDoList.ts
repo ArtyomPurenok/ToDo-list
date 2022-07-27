@@ -3,19 +3,15 @@ import React from "react"
 
 
 export const useDisplayToDoList = (data: any) => {
-    if (data.key === "All") {
-        console.log('all');
-        
+    if (data.key === "All") {       
         return data.arr
     }
-    if (data.key === "Active") {
-        console.log('Active');
-              
+
+    if (data.key === "Active") {        
         return data.arr.filter((el: any) => !el.state)
     }
-    if (data.key === "Completed") {
-        console.log('Completed');
-        
+
+    if (data.key === "Completed") {   
         return data.arr.filter((el: any) => el.state)
     }
 }

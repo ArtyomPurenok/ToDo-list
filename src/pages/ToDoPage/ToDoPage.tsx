@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import './ToDoPage.scss'
 
 import { addToDo } from "../../redux/reducer/todoReducer";
+import { clearReducer } from "../../redux/reducer/todoReducer";
 import { ToDoString } from "../../components/ToDoString";
 import { Button } from "../../components/Button";
 import { useDisplayToDoList } from "../../hooks/useDisplayToDoList";
@@ -35,6 +36,11 @@ export const ToDoPage = () => {
     }, [todoData, active])
 
 
+    //clear
+    const clearCompleted = () => {
+        dispatch(clearReducer())
+    }
+
 
 
 
@@ -58,13 +64,13 @@ export const ToDoPage = () => {
 
 
         <div>
-            <div>остаток</div>
+            <div>{todoData?.filter((el: any) => !el.state).length} items left</div>
             <div>
                 {arrButtons.map((el: any) => {
                     return <Button className={`${el == active ? 'todo_button-active' : 'todo_button'}`} onClick={setActiveButton} dataIndex={el} text={el}/>
                 })}
             </div>
-            <div>clear</div>
+            <div><button onClick={clearCompleted}></button></div>
         </div>
     </div>
 }
