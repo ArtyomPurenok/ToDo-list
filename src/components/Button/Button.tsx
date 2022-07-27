@@ -4,16 +4,19 @@ import './Button.scss'
 type ButtonProps = {
     className?: string
     onClick?: any
-    Icon?: any 
+    Icon?: any
+    text?: string
+    dataIndex?: string
 }
 
 
-export const Button = ({className, onClick, Icon}: ButtonProps) => {
-    console.log(typeof Icon);
-    
+export const Button = ({className, onClick, Icon, text, dataIndex}: ButtonProps) => {
     return <button
-    className={`button button_${className}`}
+    data-index={dataIndex}
+    className={className}
     onClick={onClick}>
+
         {Icon && <Icon/>}
+        {text}
     </button>
 }
