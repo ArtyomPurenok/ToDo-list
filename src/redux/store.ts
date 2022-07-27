@@ -1,4 +1,4 @@
-import {configureStore, combineReducers} from "@reduxjs/toolkit"
+import {configureStore} from "@reduxjs/toolkit"
 import {
     persistStore, 
     persistReducer,
@@ -14,10 +14,6 @@ import storage from 'redux-persist/lib/storage'
 import todoReducer from "./reducer/todoReducer"
 
 
-
-// const rootReduser = combineReducers({
-//     todos: todoReducer,
-// })
 
 const persistConfig = {
     key: 'root',

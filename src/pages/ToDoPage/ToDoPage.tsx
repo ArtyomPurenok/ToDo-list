@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react"
-import { useDispatch, useSelector } from "react-redux"
+import { useState } from "react"
+import { useDispatch } from "react-redux"
 import './ToDoPage.scss'
 
 import { addToDo } from "../../redux/reducer/todoReducer"
@@ -46,3 +46,6 @@ export const ToDoPage = () => {
 
     </div>
 }
+
+
+//Не понял как должны работать вкладки (нарисованы 3 вкладни в макете задания) и что за они.
