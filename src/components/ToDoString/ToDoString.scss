@@ -1,27 +1,43 @@
 .todo-string {
+    width: 100%;
+    height: 70px;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid silver;
 
-    &_text-active {
-        text-decoration: line-through;
-        color: silver;
-    }
-
-
-    &_button {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        border-color: transparent;
+    &_text {
+        font-size: 30px;
+        padding: 0 10px;
+        font-weight: 100;
 
         &-active {
-            width: 30px;
-            height: 30px;
+            font-size: 30px;
+            padding: 0 10px;
+            font-weight: 100;
+            text-decoration: line-through;
+            line-height: 1em;
+            color: silver;
+        }
+    }
+
+    &_button {
+        width: 40px;
+        height: 40px;
+        margin: 15px;
+        border-radius: 50%;
+        border: 2px solid silver;
+        background-color: transparent;
+
+        &-active {
+            width: 40px;
+            height: 40px;
+            margin: 15px;
             border-radius: 50%;
-            border-color: red;
+            border: 2px solid silver;
+            background-color: transparent;
 
             & svg {
-                width: 100%;
+                width: 80%;
                 height: 100%;
     
                  & path {

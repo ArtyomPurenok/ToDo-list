@@ -23,6 +23,6 @@ export const ToDoString = ({nameString, state}: Props) => {
 
     return <div className="todo-string">
         <Button onClick={changeState} className={state ? 'todo-string_button-active': 'todo-string_button'} Icon={state ? MarkIcon: ''}/>
-        <p className={state ? 'todo-string_text-active': ''}>{nameString}</p>
+        <p className={state ? 'todo-string_text-active': 'todo-string_text'}>{nameString}</p>
     </div>
 }

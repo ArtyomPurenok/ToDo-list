@@ -1,0 +1,50 @@
+.todo-tab {
+    width: 650px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 5px silver;
+    position: relative;
+
+    &-close {
+        display: none;
+    }
+    
+    &_button {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 10px;
+        font-size: 18px;
+        font-weight: 400;
+        color: silver;
+
+        &-tab {
+            font-size: 17px;
+            border: 2px solid transparent;
+            margin: 0px 5px;
+            padding: 4px 6px;
+            color: silver;
+            background-color: transparent;
+
+            &-active {
+                font-size: 17px;
+                border: 2px solid rgb(214, 190, 190);
+                margin: 0px 5px;
+                padding: 4px 6px;
+                border-radius: 3px;
+                color: silver;
+                background-color: transparent;
+            }
+        }
+
+        &-clear {
+            font-size: 17px;
+            border: none;
+            color: silver;
+            background-color: transparent;
+
+            &:active {
+                color: rgb(156, 156, 156);
+            }
+        }
+    }
+}
