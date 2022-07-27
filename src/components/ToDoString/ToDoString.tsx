@@ -1,4 +1,3 @@
-import React from "react"
 import './ToDoString.scss'
 
 import { changeToDoState } from "../../redux/reducer/todoReducer"

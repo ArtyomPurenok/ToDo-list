@@ -11,7 +11,7 @@ import { ReactComponent as ArrowDownIcon } from '../../components/Icons/ArrowDow
 export const ToDoPage = () => {
     const dispatch = useDispatch();
 
-    const createToDo = (el: any) => {     //
+    const createToDo = (el: any) => {  
         if (el.key === 'Enter') {
             dispatch(addToDo(el.target.value))
             el.target.value = null;

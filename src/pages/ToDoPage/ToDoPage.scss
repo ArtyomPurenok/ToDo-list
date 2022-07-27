@@ -1,15 +1,15 @@
 .todo {
-    width: 700px;
+    width: 650px;
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 80px;
 
     &_input {
-        width: 650px;
+        width: 600px;
         height: 70px;
         margin: 0 auto;
         display: flex;
         background-color: white;
-        box-shadow: 0 0 10px silver;
+        box-shadow: 0 0 5px silver;
 
         & input {
             width: 100%;

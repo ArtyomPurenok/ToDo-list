@@ -1,40 +1,43 @@
+%stylesForText {
+    max-width: 80%;
+    font-size: 30px;
+    margin: 0;
+    padding: 0 10px;
+    font-weight: 100;
+}
+
+%stylesForButton {
+    width: 40px;
+    height: 40px;
+    margin: 15px;
+    border-radius: 50%;
+    border: 2px solid silver;
+    background-color: transparent;
+}
+
+
 .todo-string {
     width: 100%;
-    height: 70px;
+    min-height: 70px;
     display: flex;
     align-items: center;
     border-bottom: 1px solid silver;
 
     &_text {
-        font-size: 30px;
-        padding: 0 10px;
-        font-weight: 100;
+        @extend %stylesForText;
 
         &-active {
-            font-size: 30px;
-            padding: 0 10px;
-            font-weight: 100;
+            @extend %stylesForText;
             text-decoration: line-through;
-            line-height: 1em;
             color: silver;
         }
     }
 
     &_button {
-        width: 40px;
-        height: 40px;
-        margin: 15px;
-        border-radius: 50%;
-        border: 2px solid silver;
-        background-color: transparent;
+        @extend %stylesForButton;
 
         &-active {
-            width: 40px;
-            height: 40px;
-            margin: 15px;
-            border-radius: 50%;
-            border: 2px solid silver;
-            background-color: transparent;
+            @extend %stylesForButton;
 
             & svg {
                 width: 80%;

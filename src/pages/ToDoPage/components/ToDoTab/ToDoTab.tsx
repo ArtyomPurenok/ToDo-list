@@ -4,7 +4,7 @@ import './ToDoTab.scss'
 
 import { Button } from "../../../../components/Button";
 import { ToDoString } from "../../../../components/ToDoString";
-import { clearReducer } from "../../../../redux/reducer/todoReducer";
+import { clearReducer, type IObject } from "../../../../redux/reducer/todoReducer";
 import { useDisplayToDoList } from "../../../../hooks/useDisplayToDoList";
 
 type ToDoTabProps = {
@@ -24,7 +24,7 @@ export const ToDoTab = ({windowActive}: ToDoTabProps) => {
     const [ active, setActive ] = useState("All");
     const [arr, setArr] = useState<Object[] | undefined>(undefined)
 
-    const setActiveButton = (el: any) => {
+    const setActiveButton = (el: any) => {       
         setActive(el.target.dataset.index);
     }
 
@@ -43,14 +43,14 @@ export const ToDoTab = ({windowActive}: ToDoTabProps) => {
 
     return <div className={windowActive === "close" ? "todo-tab-close" : "todo-tab"}>
         <div className="todo-tab_list">
-            {arr?.map((el: any) => {
+            {arr?.map((el: any) => {     
                 return <ToDoString nameString={el.name} state={el.state}/>
             })}
         </div>
 
 
         <div className="todo-tab_button">
-            <div>{todoData?.filter((el: any) => !el.state).length} items left</div>
+            <div>{todoData?.filter((el: IObject) => !el.state).length} items left</div>
             <div>
                 {arrTabButtons.map((el: any) => {
                     return <Button className={`${el == active ? 'todo-tab_button-tab-active' : 'todo-tab_button-tab'}`} onClick={setActiveButton} dataIndex={el} text={el}/>

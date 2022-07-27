@@ -1,8 +1,18 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit"
 
-const initialState: any = {
+export interface IObject {
+    name: string
+    state: boolean
+}
+
+interface IData {
+    data: IObject[]
+}
+
+const initialState: Object | IData[] = {
     data: [],
 }
+
 
 const todoReducer: any = createSlice({
     name: 'To do list',
@@ -14,11 +24,11 @@ const todoReducer: any = createSlice({
                 state: false,
             });
         },
-        changeToDoState: (state: any, action: PayloadAction<string>) => {
-            state.data = state.data?.map((el: any) => el.name === action.payload ? {...el, state: !el.state}: el)
+        changeToDoState: (state: any, action: PayloadAction<string>) => {        
+            state.data = state.data?.map((el: IObject) => el.name === action.payload ? {...el, state: !el.state}: el)
         },
         clearReducer: (state: any) => {
-            state.data = state.data.filter((el: any) => !el.state)
+            state.data = state.data.filter((el: IObject) => !el.state)
         }
     },
 

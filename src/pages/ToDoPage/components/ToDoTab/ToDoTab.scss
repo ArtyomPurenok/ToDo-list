@@ -1,43 +1,49 @@
+@mixin styleForButton($color) {
+    font-size: 16px;
+    margin: 0px 3px;
+    padding: 4px 6px;
+    border: 2px solid $color;
+    color: silver;
+    background-color: transparent;
+  }
+
+
+
 .todo-tab {
-    width: 650px;
+    position: relative;
+    width: 600px;
     margin: 0 auto;
     background-color: white;
     box-shadow: 0 0 5px silver;
-    position: relative;
 
     &-close {
         display: none;
+    }
+
+    &_list {
+        overflow: auto;
+        max-height: 284px;
     }
     
     &_button {
         display: flex;
         justify-content: space-between;
-        padding: 10px 10px;
-        font-size: 18px;
+        font-size: 17px;
         font-weight: 400;
+        padding: 10px 10px;
         color: silver;
 
         &-tab {
-            font-size: 17px;
-            border: 2px solid transparent;
-            margin: 0px 5px;
-            padding: 4px 6px;
-            color: silver;
-            background-color: transparent;
+            @include styleForButton(transparent);
 
             &-active {
-                font-size: 17px;
-                border: 2px solid rgb(214, 190, 190);
-                margin: 0px 5px;
-                padding: 4px 6px;
+                @include styleForButton(rgb(214, 190, 190));
                 border-radius: 3px;
-                color: silver;
-                background-color: transparent;
             }
         }
 
         &-clear {
-            font-size: 17px;
+            font-size: 16px;
             border: none;
             color: silver;
             background-color: transparent;
